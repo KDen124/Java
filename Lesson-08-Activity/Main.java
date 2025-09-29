@@ -5,18 +5,18 @@ class Main {
 	}
 
   void init(){
-	string print = "display";
-	System.out.println(print);
-  }
-  double FtoC(double f){
-	result = (f - 32) * 5 / 9;
-	return result;
-  }
-  double sphereVolume(double sr){
-	double volume = (4.0/3.0) * Math.PI * Math.pow(sr, 3);
-	System.out.println("Your volume is: " + sr);
-	return volume;
-  }
+  	void print (String msg);
+		System.out.println(msg);
+  	}
+  	double FtoC(double f){
+		double c = (f - 32) * 9 / 5.0;
+		return c;
+  	}
+  	double sphereVolume(double sr){
+		double volume = (4.0/3.0) * Math.PI * Math.pow	(sr/3);
+		System.out.println("Your volume is: " + sr);
+		return volume;
+  	}
   
   double coneVolume(double r, double h){
 	double cone = Math.Pi * Math.pow(r, 2) * (h / 3);
