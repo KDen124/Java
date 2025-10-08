@@ -5,27 +5,24 @@ class Main {
 	}
 
   void init(){
-  	
+  	System.out.println("Hello World");
   }
   double FtoC(double f){
 		double c = (f - 32) * 9 / 5.0;
 		return c;
   }
   double sphereVolume(double sr){
-		double volume = (4.0/3.0) * Math.PI * Math.pow(sr,3);
-		System.out.println("Your volume is: " + sr);
-		return volume;
+		double v = (4.0/3.0) * Math.PI * Math.pow(sr,3);
+		return v;
   }
   
   double coneVolume(double r, double h){
-	double cone = Math.PI* Math.pow(r,2) * (h / 3.0);
-	System.out.println("Your volume is: " + cone);
+	double cone = (1.0/3.0) * Math.PI* Math.pow(r,2) * h ;
 	return cone;
   }
 
   double distance(double x1, double y1, double x2, double y2){
 	double dist = Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1), 2));
-	System.out.println("Your distance is: " + dist);
 	return dist;
 }
 
