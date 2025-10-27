@@ -11,6 +11,8 @@ class Main {
 
     
   }
-
+  String collegeCredit (String cc){
+    
+  }
  
 }
