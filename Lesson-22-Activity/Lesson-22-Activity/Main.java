@@ -57,7 +57,7 @@ class Main {
   
   double quizGrader(char[] studentAns, char[] ansKey){
     double correct = 0.0;
-    for(int i=0; i<studentAns.length; i++){
+    for(int i=0; i<ansKey.length; i++){
       if(studentAns[i] == ansKey[i])
         correct+= 1;
     }
