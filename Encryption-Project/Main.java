@@ -16,14 +16,7 @@ class Main {
     sub[3] = 'o';
     sub[4] = 'u';
 
-    char[] sub2 = new char[5];
-    sub2[0] = '\u2663';  // Club
-    sub2[1] = '\u2660';  // Spade
-    sub2[2] = '\u2665';  // Heart
-    sub2[3] = '\u2666';  // Diamond
-    sub2[4] = '\u2836';  // Bralle symbol
 
-    
     // Encoding message
     String file = Input.readFile("test.txt");
 
@@ -77,15 +70,20 @@ String decipher(String S){
 	String bld= " ";
 	for (int i=0; i< S.length(); i++){
 		char ch = S.charAt(i);
-		if (ch == 'a' )
-			bld += 'z';
-		else if(ch == 'A');
-			bld += 'Z';
+		if (ch == 'z' )
+			bld += 'b';
+		else if(ch == 'Z');
+			bld += 'B';
+    else if(ch == 'y');
+			bld += 'a';
+    else if(ch == 'Y');
+			bld += 'A';
 		else{
-int ascii = (int)ch;
-		ch = (char)(ascii - 2);
-		bld += ch;
+      int wingdings = (int)ch;
+		  ch = (char)(wingdings - 2);
+		  bld += ch;
 		}
+
 	}
 	return bld;
 }
