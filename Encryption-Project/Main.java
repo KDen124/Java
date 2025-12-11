@@ -54,12 +54,12 @@ String cipher(String S){
 		char ch = S.charAt(i);
 		if (ch == 'z' )
 			bld += 'a';
-		else if(ch == 'Z');
+		else if(ch == 'Z')
 			bld += 'A';
 		else{
-int ascii = (int)ch;
-		ch = (char)(ascii + 1);
-		bld += ch;
+       int ascii = (int)ch;
+		   ch = (char)(ascii + 1);
+		   bld += ch;
 		}
 	}
 	return bld;
@@ -72,20 +72,20 @@ String decipher(String S){
 		char ch = S.charAt(i);
 		if (ch == 'z' )
 			bld += 'b';
-		else if(ch == 'Z');
+		else if(ch == 'Z')
 			bld += 'B';
-    else if(ch == 'y');
+    else if(ch == 'y')
 			bld += 'a';
-    else if(ch == 'Y');
+    else if(ch == 'Y')
 			bld += 'A';
 		else{
       int wingdings = (int)ch;
 		  ch = (char)(wingdings - 2);
-		  bld += ch;
+		  bld += ch ;
 		}
-
+    String result = bld + "ay";
 	}
-	return bld;
+	return result;
 }
 
 
