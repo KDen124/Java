@@ -52,10 +52,14 @@ String cipher(String S){
 	String bld= " ";
 	for (int i=0; i< S.length(); i++){
 		char ch = S.charAt(i);
-		if (ch == 'z' )
-			bld += 'a';
-		else if(ch == 'Z')
-			bld += 'A';
+		if (ch == 'b' )
+			bld += 'z';
+		else if(ch == 'B')
+			bld += 'Z';
+    else if(ch == 'A')
+			bld += 'y';
+    else if(ch == 'A')
+			bld += 'Y';
 		else{
        int ascii = (int)ch;
 		   ch = (char)(ascii + 1);
