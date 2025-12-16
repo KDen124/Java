@@ -17,13 +17,13 @@ class Main {
     sub[4] = 'u';
 
 
-    // Encoding message
+      Encoding message
     String file = Input.readFile("test.txt");
 
     //substituion
-    String encodedMsg1 = subEncryption(file,sub,sub2);
-    //Input.writeFile("Encode1.txt",encodedMsg1);
-
+    String encodedMsg1 = cipher(file);
+    Input.writeFile("Encode1.txt",encodedMsg1);
+    /** 
     // caesar cipher
     String encodedMsg2 = encode(encodedMsg1);
     //Input.writeFile("Encode2.txt",encodedMsg2);
@@ -44,7 +44,7 @@ class Main {
     
      String decodedMsg3 = subEncryption(decodedMsg2, sub2, sub);
     //Input.writeFile("Decode1.txt", decodedMsg3);
-    
+    */
     
   }
 
@@ -62,7 +62,7 @@ String cipher(String S){
 			bld += 'Y';
 		else{
        int ascii = (int)ch;
-		   ch = (char)(ascii + 1);
+		   ch = (char)(ascii + 2);
 		   bld += ch;
 		}
 	}
@@ -83,13 +83,12 @@ String decipher(String S){
     else if(ch == 'Y')
 			bld += 'A';
 		else{
-      int wingdings = (int)ch;
-		  ch = (char)(wingdings - 2);
+      int ascii = (int)ch;
+		  ch = (char)(ascii - 2);
 		  bld += ch ;
 		}
-    String result = bld + "ay";
 	}
-	return result;
+	return bld;
 }
 
 
