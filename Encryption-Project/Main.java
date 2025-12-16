@@ -23,6 +23,7 @@ class Main {
     //substituion
     String encodedMsg1 = cipher(file);
     Input.writeFile("Encode1.txt",encodedMsg1);
+    print(encodedMsg1);
     /** 
     // caesar cipher
     String encodedMsg2 = encode(encodedMsg1);
