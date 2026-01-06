@@ -17,7 +17,7 @@ class Main {
     sub[4] = 'u';
 
 
-      Encoding message
+      //Encoding message
     String file = Input.readFile("test.txt");
 
     //substituion
