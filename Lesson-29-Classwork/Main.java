@@ -9,7 +9,7 @@ class Main {
     	dog dog1 = new dog();
 	    dog1.name = "Toto";
 	    dog1.age = 3;
-	    dog1.breed = "Golden Retriever";
+	    dog1.breed = "Terrier";
 	    dog1.bark();
 
     	dog dog2 = new dog();
