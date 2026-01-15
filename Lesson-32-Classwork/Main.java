@@ -15,7 +15,8 @@ class Main {
 
     
     //Create a new student objects 
-
+    Student s1 = new Student("Alice",10,3.5,g1,courses1);
+    Student s2 = new Student("Bob",11,3.8,g2,courses2);
     
    
     
