@@ -30,11 +30,11 @@ class Student{
 
   boolean checkCourse(String courseName){
     for(int x=0; x<=this.courses.length-1;x++){
-      if(this.courses[x].equals(courseName)){
+      if(courses[x].equals(courseName)){
         return true;
-      } else {
-        return false;
       }
     }
+    return false;
+  }
   }
 }
