@@ -42,7 +42,7 @@ class Main {
     
     print ("Average grade of " + studentList[4].getFirstName() + " is " + studentList[4].calculateAvg());
     
-  }
+  
     if (studentList[0].calculateAvg() > 70) {
       print (studentList[0].getFirstName() + " has a passing average.");
     } 
@@ -58,7 +58,7 @@ class Main {
     if (studentList[4].calculateAvg() > 70) {   
       print (studentList[4].getFirstName() + " has a passing average.");
     } 
-
+}
 
 
 
