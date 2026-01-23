@@ -38,9 +38,14 @@ class Main {
   int stud = 0;
   for (int x=0; x<students.length; x++){
     Student student = students[x];
-  
+    if(student.findCourse("SHF21U2C")){
+      stud++;
+    }
+    
 
   }
+  print("Number of students in SHF21U2C: " + stud);
+
   for (int x=0; x<students.length; x++){
     Student student = students[x];
     if(student.findTeacher("Porchetta")&& student.findCourseStartingWith("MK")){
