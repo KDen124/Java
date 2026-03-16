@@ -26,12 +26,27 @@ class Main {
    
      
       }    
-  sql = "UPDATE cr101 SET ROOM = '122' WHERE StudentID = STUDENT1001;"
+  sql = "UPDATE cr101 SET ROOM = '122' WHERE StudentID = STUDENT1001 AND PERIOD = 3";
   queryResult = db.runSQL(sql,"table-auto");
   print(queryResult);
 
+  sql = "UPDATE cr101 DELETE FROM Course WHERE StudentID = STUDENT1200";
+  queryResult = db.runSQL(sql,"table-auto");
+  print(queryResult);
+ 
+  sql = "UPDATE cr101 SET ROOM = 213 WHERE TEACHER1 = 'DOYLE' and PERIOD = (4,5)";
+  queryResult = db.runSQL(sql,"table-auto");
+  print(queryResult);
 
+  sql = "UPDATE cr101 SET TEACHER1 = 'MR ARCHETTI' WHERE TEACHER1 = 'MR ROFFLER' AND COURSE = 'MQF44QGF' AND SECTION = 1";
+  queryResult = db.runSQL(sql,"table-auto");
+  print(queryResult);
 
-
+  sql = "UPDATE cr101 SET GRADE = 11 AND OffClass = 'Junior' WHERE StudentID = STUDENT999";
+  queryResult = db.runSQL(sql,"table-auto");
+  print(queryResult);
+  sql = "UPDATE cr101 DELETE FROM Course WHERE StudentID = STUDENT1200";
+  queryResult = db.runSQL(sql,"table-auto");
+  print(queryResult);
 }
 
