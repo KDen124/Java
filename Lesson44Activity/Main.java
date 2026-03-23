@@ -32,11 +32,22 @@ class Main {
     //2
     //For each Invoice from April 2012, retrieve customer first and last name, invoice id, and Invoice date
 
-    
+    sql = "SELECT * FROM invoices.invoiceid From invoices";
+    sql += "INNER JOIN customers ON customers.customerID = invoices.customerID ";
+    sql += "Limit April 2012";
+    result = db.runSQL(sql, "table-auto");
+    print(result);
     //3
     //For the first 20 invoices get the customer id, invoice id, track name, unit price and quantity .(Hint: information is in three tables) 
 
+    sql = "SELECT * FROM invoices.invoiceid From invoices";
+    sql += "INNER JOIN customers ON customers.customerID = invoices.customerID ";
+    sql += "INNER JOIN customers ON customers.customerID = invoices.customerID ";
+    sql += "Limit 20";
+    result = db.runSQL(sql, "table-auto");
+    print(result);
 
+    
     //4
     //What is the list of customers' names whose merchandise is being shipped either to the USA, Germany or Poland? (Hint: use billingcountry and remove duplicates)
 
