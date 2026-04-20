@@ -42,6 +42,12 @@ class Main {
 
     String sql = "Select * from customers ";
     server.createContext("/customers", new RouteHandler(db,sql));
+
+    sql = "Select customers.firstname, customers.lastname, ";
+    sql += "invoices.invoiceDate from customers ";
+    sql += "Inner Join Invoices ON customers.customerid = invoices.customerid";
+    server.createContext("/customersInvoices", new RouteHandler(db,sql));
+
     //Start the server
     server.start();
 
