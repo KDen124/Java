@@ -40,13 +40,13 @@ class Main {
     
     server.createContext("/", new RouteHandler("default route...") );
 
-    String sql = "Select * from customers ";
-    server.createContext("/customers", new RouteHandler(db,sql));
+    String sql = "Select * from albums ";
+    server.createContext("/albums", new RouteHandler(db,sql));
 
-    sql = "Select customers.firstname, customers.lastname, ";
-    sql += "invoices.invoiceDate from customers ";
-    sql += "Inner Join Invoices ON customers.customerid = invoices.customerid";
-    server.createContext("/customersInvoices", new RouteHandler(db,sql));
+    sql = "Select albums.title, albums.artistid, ";
+    sql += "artists.name from albums ";
+    sql += "Inner Join Artists ON artists.artistid = albums.artistid";
+    server.createContext("/albumsArtists", new RouteHandler(db,sql));
 
     //Start the server
     server.start();
